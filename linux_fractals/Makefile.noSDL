@@ -1,0 +1,55 @@
+SRC_MANDEL=mandel/mandel_simple/noSDL/mandel.cpp
+SRC_JULIA=julia/julia_simple/noSDL/julia.cpp
+
+SRC_MANDEL_E=mandel/mandel_explorer/noSDL/mandel_explorer.cpp
+SRC_JULIA_E=julia/julia_explorer/noSDL/julia_explorer.cpp
+
+SRC_TREE=tree/noSDL/tree.cpp
+
+INCLUDES=-I includes/
+LIB_SRC=includes/fractal_math_noSDL.cpp
+
+TARGET_M=bin/mandel_noSDL
+TARGET_J=bin/julia_noSDL
+TARGET_ME=bin/mandel_explorer_noSDL
+TARGET_JE=bin/julia_explorer_noSDL
+TARGET_TREE=bin/tree_noSDL
+
+.PHONY: all
+#all: $(TARGET_M) $(TARGET_J) $(TARGET_ME) $(TARGET_JE) $(TARGET_TREE)
+all: $(TARGET_M) $(TARGET_J)
+
+.PHONY: mandel
+mandel: $(TARGET_M)
+
+.PHONY: julia
+julia: $(TARGET_J)
+
+.PHONY: mandel_exp
+mandel_exp: $(TARGET_ME)
+
+.PHONY: julia_exp
+julia_exp: $(TARGET_JE)
+
+.PHONY: tree
+tree: $(TARGET_TREE)
+
+
+$(TARGET_M):
+	g++ $(SRC_MANDEL) $(LIB_SRC) $(INCLUDES) -o $@
+
+$(TARGET_J):
+	g++ $(SRC_JULIA) $(LIB_SRC) $(INCLUDES) -o $@
+
+$(TARGET_ME):
+	g++ $(SRC_MANDEL_E) $(LIB_SRC) $(INCLUDES) -o $@
+
+$(TARGET_JE):
+	g++ $(SRC_JULIA_E) $(LIB_SRC) $(INCLUDES) -o $@
+
+$(TARGET_TREE):
+	g++ $(SRC_TREE) $(LIB_SRC) $(INCLUDES) -o $@
+
+.PHONY: clean
+clean:
+	rm -rf bin/*

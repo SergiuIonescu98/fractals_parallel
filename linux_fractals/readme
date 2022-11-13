@@ -1,0 +1,43 @@
+#### link for documentation
+
+## install sdl
+https://gist.github.com/aaangeletakis/3187339a99f7786c25075d4d9c80fad5
+
+## gui library:
+
+https://lodev.org/cgtutor/quickcg.html
+https://lodev.org/cgtutor/examples.html
+
+## julia and mandel:
+
+https://lodev.org/cgtutor/juliamandelbrot.html#Introduction
+
+
+#### to compile
+
+g++ *.cpp -lSDL -O3 -o <output_file>
+
+
+#### to profile
+
+valgrind --tool=callgrind --log-file=callgrind.log <./file>
+kcachegrind callgrind.out.24287 
+
+
+
+###
+
+putem vorbi despre zonele fractalilor
+si la tree..despre cum se strica sau nu simetria
+
+## to do
+
+parametrii andreea ( julia mendel + noSDL ) ##
+config ##
+scripts folder ##
+makefile_noSDL ##
+
+si prototip explorer noSDL ? ( to be done in the future )
+parametrii explorer
+config explorer
+noSDL tree

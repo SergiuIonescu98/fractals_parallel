@@ -1,0 +1,2 @@
+void mandel_math_noSDL(int h, int w, double zoom, double moveX, double moveY, int maxIterations);
+void julia_math_noSDL(int h, int w , double zoom, double moveX, double moveY, double cRe, double cIm, int maxIterations);

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wArg=1024
+hArg=768
+maxIterArg=1000
