@@ -1,3 +1,5 @@
+CFLAGS = -O3 -W -Wall
+
 SRC_MANDEL=mandel/mandel_simple/mandel.cpp
 SRC_JULIA=julia/julia_simple/julia.cpp
 
@@ -36,19 +38,19 @@ tree: $(TARGET_TREE)
 
 
 $(TARGET_M):
-	g++ $(SRC_MANDEL) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
+	g++ $(CFLAGS) $(SRC_MANDEL) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
 
 $(TARGET_J):
-	g++ $(SRC_JULIA) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
+	g++ $(CFLAGS) $(SRC_JULIA) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
 
 $(TARGET_ME):
-	g++ $(SRC_MANDEL_E) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
+	g++ $(CFLAGS) $(SRC_MANDEL_E) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
 
 $(TARGET_JE):
-	g++ $(SRC_JULIA_E) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
+	g++ $(CFLAGS) $(SRC_JULIA_E) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
 
 $(TARGET_TREE):
-	g++ $(SRC_TREE) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
+	g++ $(CFLAGS) $(SRC_TREE) $(LIBS_SRC) $(LIBS) $(INCLUDES) -o $@
 
 .PHONY: clean
 clean:
