@@ -41,3 +41,12 @@ si prototip explorer noSDL ? ( to be done in the future )
 parametrii explorer
 config explorer
 noSDL tree
+
+
+###
+
+prima oara 10 secunde un sg fractal
+balansul fiecarei linii de cod
+putem sa facem o histograma sa vedem cum variaza balansul in functia de zona pe fractal
+eu mpi
+fetele pthreads openmp

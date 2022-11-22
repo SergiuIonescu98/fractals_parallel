@@ -1,4 +1,4 @@
-CFLAGS = -O3 -W -Wall
+CFLAGS = -O3 -W -Wall -g
 
 SRC_MANDEL=mandel/mandel_simple/mandel.cpp
 SRC_JULIA=julia/julia_simple/julia.cpp
