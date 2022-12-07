@@ -50,3 +50,15 @@ balansul fiecarei linii de cod
 putem sa facem o histograma sa vedem cum variaza balansul in functia de zona pe fractal
 eu mpi
 fetele pthreads openmp
+
+
+###
+
+voi sparge generarea fractulului pe bucati
+se va genera sa zicem prima parte din stanga...mijlocul si dreapta
+si dupa voi optimiza fiecare parte cu mpi
+si fetele la fel si ele cu partea lor ( dar aici inca nu trebuie optimizari profiling doar sa sparg generarea pe parti )
+
+de asemenea sa iau exemple de programre simple si sa le optimizez
+de asemenea sa fac pe ele profiling
+profiiling si cu oneAPI intel
