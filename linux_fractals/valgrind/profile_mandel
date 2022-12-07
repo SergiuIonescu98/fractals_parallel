@@ -1,0 +1,11 @@
+#!/bin/bash
+
+w=$1
+h=$2
+i=$3
+
+valgrind --tool=callgrind --log-file=callgrind.log ./mandel $w $h $i
+
+rm callgrind.log
+mv callgrind.out.* mandelgrind_"$w"_"$h"_"$i".out
+mv mandelgrind* mandel_v/

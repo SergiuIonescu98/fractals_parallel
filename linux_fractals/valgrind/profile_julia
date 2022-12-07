@@ -1,0 +1,11 @@
+#!/bin/bash
+
+w=$1
+h=$2
+i=$3
+
+valgrind --tool=callgrind --log-file=callgrind.log ./julia $w $h $i
+
+rm callgrind.log
+mv callgrind.out.* juliagrind_"$w"_"$h"_"$i".out
+mv juliagrind* julia_v/
